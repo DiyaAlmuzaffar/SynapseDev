@@ -1,0 +1,144 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "notmanagedsynapse"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureMLService1_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureMLService2_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureMLService3_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureMLService4_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureMLService5_servicePrincipalKey": {
+			"value": ""
+		},
+		"DiyaInternalStroageByUsingAccountKey_connectionString": {
+			"value": ""
+		},
+		"cosmosdblink_connectionString": {
+			"value": ""
+		},
+		"notmanagedsynapse-WorkspaceDefaultSqlServer_connectionString": {
+			"value": ""
+		},
+		"restidentity_servicePrincipalKey": {
+			"value": ""
+		},
+		"verifypermission_accountKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_properties_typeProperties_serviceEndpoint": {
+			"value": "https://testdlfs.blob.core.windows.net"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://testdlfs.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://zerostroage.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://diyamlkeyvault.vault.azure.net/"
+		},
+		"AzureKeyVault2_properties_typeProperties_baseUrl": {
+			"value": "https://diyastoragekeyvault.vault.azure.net/"
+		},
+		"AzureMLService1_properties_typeProperties_subscriptionId": {
+			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
+		},
+		"AzureMLService1_properties_typeProperties_resourceGroupName": {
+			"value": "adwrg"
+		},
+		"AzureMLService1_properties_typeProperties_servicePrincipalId": {
+			"value": "0c99dec6-5f5a-4a6b-9d0c-d9c8ddd08e52"
+		},
+		"AzureMLService1_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureMLService2_properties_typeProperties_subscriptionId": {
+			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
+		},
+		"AzureMLService2_properties_typeProperties_resourceGroupName": {
+			"value": "adwrg"
+		},
+		"AzureMLService2_properties_typeProperties_servicePrincipalId": {
+			"value": "5b363489-386b-406d-abb7-fa38d2ad79f4"
+		},
+		"AzureMLService2_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureMLService3_properties_typeProperties_subscriptionId": {
+			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
+		},
+		"AzureMLService3_properties_typeProperties_resourceGroupName": {
+			"value": "adwrg"
+		},
+		"AzureMLService3_properties_typeProperties_servicePrincipalId": {
+			"value": "48927e34-c372-42a1-b3e0-6706082fd7a7"
+		},
+		"AzureMLService3_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureMLService4_properties_typeProperties_subscriptionId": {
+			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
+		},
+		"AzureMLService4_properties_typeProperties_resourceGroupName": {
+			"value": "adwrg"
+		},
+		"AzureMLService4_properties_typeProperties_servicePrincipalId": {
+			"value": "48927e34-c372-42a1-b3e0-6706082fd7a7"
+		},
+		"AzureMLService4_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureMLService5_properties_typeProperties_subscriptionId": {
+			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
+		},
+		"AzureMLService5_properties_typeProperties_resourceGroupName": {
+			"value": "adwrg"
+		},
+		"AzureMLService5_properties_typeProperties_servicePrincipalId": {
+			"value": "fefbf1d3-93df-4056-b161-11226e35e941"
+		},
+		"AzureMLService5_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"diyaintgenralstoragelink_properties_typeProperties_url": {
+			"value": "https://diyastorageinternal.dfs.core.windows.net"
+		},
+		"notmanagedsynapse-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://diyastorageinternal.dfs.core.windows.net"
+		},
+		"restidentity_properties_typeProperties_url": {
+			"value": "https://management.azure.com/subscriptions/b52e0335-cc92-47a1-b234-38bd35c2750d/resourceGroups/adwrg/providers/Microsoft.Synapse/workspaces/notmanagedsynapse/sqlPools/testdata/recommendedSensitivityLabels?api-version=2019-06-01-preview"
+		},
+		"restidentity_properties_typeProperties_servicePrincipalId": {
+			"value": "48927e34-c372-42a1-b3e0-6706082fd7a7"
+		},
+		"restidentity_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"restidentity_properties_typeProperties_aadResourceId": {
+			"value": "https://management.azure.com/"
+		},
+		"verifypermission_properties_typeProperties_url": {
+			"value": "https://viewpermissions.dfs.core.windows.net"
+		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"value": "https://diyastoragekeyvault.vault.azure.net/"
+		}
+	}
+}
