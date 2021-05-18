@@ -137,9 +137,10 @@
 					"%%csharp\r\n",
 					"\r\n",
 					"// Credentials.GetSecret(\"azure key vault name\",\"secret name\",\"linked service name\")\r\n",
-					"Credentials.GetSecret(\"diyastoragekeyvault\",\"diyastorageinternalkey\",\"AzureKeyVault3\")"
+					"// \"AzureKeyVault3\"\r\n",
+					"Credentials.GetSecret(\"diyastoragekeyvault\",\"diyastorageinternalkey\")"
 				],
-				"execution_count": 8
+				"execution_count": 10
 			},
 			{
 				"cell_type": "code",
