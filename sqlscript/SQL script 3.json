@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 3",
+	"properties": {
+		"content": {
+			"query": "SELECT *\nFROM sys.dm_pdw_exec_requests\nWHERE status not in ('Completed','Failed','Cancelled')\n  AND session_id <> session_id()\nORDER BY submit_time DESC;\n\n\n\nSELECT * FROM sys.dm_pdw_request_steps\nWHERE row_count > 0\nORDER BY step_index;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "testpoolneruope",
+				"databaseName": "testpoolneruope"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

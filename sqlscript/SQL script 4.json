@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 4",
+	"properties": {
+		"content": {
+			"query": "-- Monitor active queries\nSELECT *\nFROM sys.dm_pdw_exec_requests\nWHERE status not in ('Completed','Failed','Cancelled')\n  AND session_id <> session_id()\nORDER BY submit_time DESC;\n\n\n\nSELECT * FROM sys.dm_pdw_request_steps\nWHERE request_id = 'QID117685'\nORDER BY step_index;\n\nSELECT * FROM sys.dm_pdw_request_steps\nWHERE request_id = 'QID117738'\nORDER BY step_index;\n\nSELECT * FROM sys.dm_pdw_request_steps\nWHERE request_id = 'QID117770'\nORDER BY step_index;\n\nSELECT * FROM sys.dm_pdw_request_steps\nWHERE request_id = 'QID117861'\nORDER BY step_index;\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "testpoolneruope",
+				"databaseName": "testpoolneruope"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

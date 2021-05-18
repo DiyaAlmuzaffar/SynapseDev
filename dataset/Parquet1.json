@@ -1,0 +1,183 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "diyaintgenralstoragelink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "part-00000-31c38df8-0ade-4e4c-8b87-287655263f9d.c000.snappy.parquet",
+				"folderPath": "parquet",
+				"fileSystem": "cont01"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Id",
+				"type": "INT64"
+			},
+			{
+				"name": "PaketId",
+				"type": "INT64"
+			},
+			{
+				"name": "Eventcode",
+				"type": "INT32"
+			},
+			{
+				"name": "Timestamp",
+				"type": "UTF8"
+			},
+			{
+				"name": "Sscc",
+				"type": "UTF8"
+			},
+			{
+				"name": "EreignisFiliale",
+				"type": "INT32"
+			},
+			{
+				"name": "EreignisFahrzeug",
+				"type": "DECIMAL",
+				"precision": 12,
+				"scale": 4
+			},
+			{
+				"name": "Benutzer",
+				"type": "UTF8"
+			},
+			{
+				"name": "Latitude",
+				"type": "DECIMAL",
+				"precision": 7,
+				"scale": 5
+			},
+			{
+				"name": "Longitude",
+				"type": "DECIMAL",
+				"precision": 8,
+				"scale": 5
+			},
+			{
+				"name": "GeoCheck",
+				"type": "UTF8"
+			},
+			{
+				"name": "Auslieferstatus",
+				"type": "UTF8"
+			},
+			{
+				"name": "Quittungsgeber",
+				"type": "UTF8"
+			},
+			{
+				"name": "RegalNr",
+				"type": "UTF8"
+			},
+			{
+				"name": "RasterVon",
+				"type": "UTF8"
+			},
+			{
+				"name": "RasterBis",
+				"type": "UTF8"
+			},
+			{
+				"name": "Laenge",
+				"type": "INT32"
+			},
+			{
+				"name": "Breite",
+				"type": "INT32"
+			},
+			{
+				"name": "Hoehe",
+				"type": "INT32"
+			},
+			{
+				"name": "Gewicht",
+				"type": "DECIMAL",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "StatusWaage",
+				"type": "UTF8"
+			},
+			{
+				"name": "StatusScanner",
+				"type": "UTF8"
+			},
+			{
+				"name": "StatusAllgemein",
+				"type": "UTF8"
+			},
+			{
+				"name": "FahrzeugId",
+				"type": "UTF8"
+			},
+			{
+				"name": "RegalTyp",
+				"type": "INT32"
+			},
+			{
+				"name": "TourNr",
+				"type": "INT64"
+			},
+			{
+				"name": "TourDatum",
+				"type": "UTF8"
+			},
+			{
+				"name": "PtsSyncedAt",
+				"type": "UTF8"
+			},
+			{
+				"name": "AuftragId",
+				"type": "INT64"
+			},
+			{
+				"name": "Bemerkungen",
+				"type": "UTF8"
+			},
+			{
+				"name": "BoxBarcode",
+				"type": "UTF8"
+			},
+			{
+				"name": "SignatureRefused",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "EventSource",
+				"type": "UTF8"
+			},
+			{
+				"name": "Stellplatz",
+				"type": "UTF8"
+			},
+			{
+				"name": "CreatedAt",
+				"type": "UTF8"
+			},
+			{
+				"name": "Grund",
+				"type": "UTF8"
+			},
+			{
+				"name": "CrossdockingNr",
+				"type": "UTF8"
+			},
+			{
+				"name": "BehaelterNr",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

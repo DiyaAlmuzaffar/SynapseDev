@@ -1,0 +1,28 @@
+{
+	"name": "Dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSynapseAnalyticsTable1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"script": "source(output(\n\t\tId as long,\n\t\tPaketId as long,\n\t\tEventcode as integer,\n\t\tTimestamp as string,\n\t\tSscc as string,\n\t\tEreignisFiliale as integer,\n\t\tEreignisFahrzeug as decimal(12,4),\n\t\tBenutzer as string,\n\t\tLatitude as decimal(7,5),\n\t\tLongitude as decimal(8,5),\n\t\tGeoCheck as string,\n\t\tAuslieferstatus as string,\n\t\tQuittungsgeber as string,\n\t\tRegalNr as string,\n\t\tRasterVon as string,\n\t\tRasterBis as string,\n\t\tLaenge as integer,\n\t\tBreite as integer,\n\t\tHoehe as integer,\n\t\tGewicht as decimal(20,3),\n\t\tStatusWaage as string,\n\t\tStatusScanner as string,\n\t\tStatusAllgemein as string,\n\t\tFahrzeugId as string,\n\t\tRegalTyp as integer,\n\t\tTourNr as long,\n\t\tTourDatum as string,\n\t\tPtsSyncedAt as string,\n\t\tAuftragId as long,\n\t\tBemerkungen as string,\n\t\tBoxBarcode as string,\n\t\tSignatureRefused as boolean,\n\t\tEventSource as string,\n\t\tStellplatz as string,\n\t\tCreatedAt as string,\n\t\tGrund as string,\n\t\tCrossdockingNr as string,\n\t\tBehaelterNr as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet') ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\trecreate:true,\n\tformat: 'table',\n\tstaged: false,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tsaveOrder: 0,\n\terrorHandlingOption: 'stopOnFirstError') ~> sink1"
+		}
+	}
+}

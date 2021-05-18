@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP (100) [PassengerId]\n,[Pclass]\n,[Name]\n,[Sex]\n,[Age]\n,[SibSp]\n,[Parch]\n,[Ticket]\n,[Fare]\n,[Cabin]\n,[Embarked]\n FROM [default].[dbo].[sf_titanic]",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"poolName": "Built-in",
+				"databaseName": "master"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
