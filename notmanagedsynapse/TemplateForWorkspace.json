@@ -75,6 +75,10 @@
 			"type": "string",
 			"defaultValue": "https://diyastoragekeyvault.vault.azure.net/"
 		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://diyastoragekeyvault.vault.azure.net/"
+		},
 		"AzureMLService1_properties_typeProperties_subscriptionId": {
 			"type": "string",
 			"defaultValue": "b52e0335-cc92-47a1-b234-38bd35c2750d"
@@ -183,9 +187,9 @@
 			"type": "string",
 			"defaultValue": "https://viewpermissions.dfs.core.windows.net"
 		},
-		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+		"testwithmah_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://diyastoragekeyvault.vault.azure.net/"
+			"defaultValue": "https://diyastorageinternal.dfs.core.windows.net"
 		}
 	},
 	"variables": {
@@ -646,6 +650,19 @@
 				"type": "AzureKeyVault",
 				"typeProperties": {
 					"baseUrl": "[parameters('AzureKeyVault2_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/AzureKeyVault3')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AzureKeyVault3_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []
@@ -1350,8 +1367,7 @@
 				"metadata": {
 					"saveOutput": true,
 					"synapse_widget": {
-						"version": "0.1",
-						"state": {}
+						"version": "0.1"
 					},
 					"kernelspec": {
 						"name": "synapse_spark",
@@ -1372,10 +1388,8 @@
 						"sparkVersion": "2.4",
 						"nodeCount": 10,
 						"cores": 4,
-						"memory": 28,
-						"automaticScaleJobs": false
-					},
-					"sessionKeepAliveTimeout": 30
+						"memory": 28
+					}
 				},
 				"cells": [
 					{
@@ -1469,10 +1483,11 @@
 							"%%csharp\r\n",
 							"\r\n",
 							"// Credentials.GetSecret(\"azure key vault name\",\"secret name\",\"linked service name\")\r\n",
-							"Credentials.GetSecret(\"diyastoragekeyvault\",\"diyastorageinternalkey\",\"AzureKeyVault3\")"
+							"// \"AzureKeyVault3\"\r\n",
+							"Credentials.GetSecret(\"diyastoragekeyvault\",\"diyastorageinternalkey\")"
 						],
 						"outputs": [],
-						"execution_count": 8
+						"execution_count": 10
 					},
 					{
 						"cell_type": "code",
@@ -1810,7 +1825,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/testpoolneruope')]",
+			"name": "[concat(parameters('workspaceName'), '/PowerBIPool')]",
 			"type": "Microsoft.Synapse/workspaces/sqlPools",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
@@ -1823,17 +1838,23 @@
 			"location": "northeurope"
 		},
 		{
-			"name": "[concat(parameters('workspaceName'), '/AzureKeyVault3')]",
+			"name": "[concat(parameters('workspaceName'), '/testwithmah')]",
 			"type": "Microsoft.Synapse/workspaces/linkedServices",
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"annotations": [],
-				"type": "AzureKeyVault",
+				"type": "AzureBlobFS",
 				"typeProperties": {
-					"baseUrl": "[parameters('AzureKeyVault3_properties_typeProperties_baseUrl')]"
+					"url": "[parameters('testwithmah_properties_typeProperties_url')]"
+				},
+				"connectVia": {
+					"referenceName": "AutoResolveIntegrationRuntime",
+					"type": "IntegrationRuntimeReference"
 				}
 			},
-			"dependsOn": []
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
+			]
 		}
 	]
 }

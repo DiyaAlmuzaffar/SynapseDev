@@ -56,6 +56,9 @@
 		"AzureKeyVault2_properties_typeProperties_baseUrl": {
 			"value": "https://diyastoragekeyvault.vault.azure.net/"
 		},
+		"AzureKeyVault3_properties_typeProperties_baseUrl": {
+			"value": "https://diyastoragekeyvault.vault.azure.net/"
+		},
 		"AzureMLService1_properties_typeProperties_subscriptionId": {
 			"value": "b52e0335-cc92-47a1-b234-38bd35c2750d"
 		},
@@ -137,8 +140,8 @@
 		"verifypermission_properties_typeProperties_url": {
 			"value": "https://viewpermissions.dfs.core.windows.net"
 		},
-		"AzureKeyVault3_properties_typeProperties_baseUrl": {
-			"value": "https://diyastoragekeyvault.vault.azure.net/"
+		"testwithmah_properties_typeProperties_url": {
+			"value": "https://diyastorageinternal.dfs.core.windows.net"
 		}
 	}
 }
