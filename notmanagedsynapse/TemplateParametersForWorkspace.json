@@ -8,6 +8,9 @@
 		"AzureDataLakeStorage2_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
@@ -49,6 +52,9 @@
 		},
 		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://zerostroage.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://diyastorageinternal.dfs.core.windows.net"
 		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://diyamlkeyvault.vault.azure.net/"
@@ -137,11 +143,11 @@
 		"restidentity_properties_typeProperties_aadResourceId": {
 			"value": "https://management.azure.com/"
 		},
-		"verifypermission_properties_typeProperties_url": {
-			"value": "https://viewpermissions.dfs.core.windows.net"
-		},
 		"testwithmah_properties_typeProperties_url": {
 			"value": "https://diyastorageinternal.dfs.core.windows.net"
+		},
+		"verifypermission_properties_typeProperties_url": {
+			"value": "https://viewpermissions.dfs.core.windows.net"
 		}
 	}
 }
