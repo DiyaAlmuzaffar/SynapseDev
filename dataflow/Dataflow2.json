@@ -1,0 +1,20 @@
+{
+	"name": "Dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"script": "source(output(\n\t\tfeedback as (type as string, survey_type as string, platform as string, scorecard_link as string, site_name as string, site_id as string, date_of_visit as string, date_feedback_added as string, nps_score as string, csat_score as string, comments as string, staff_mention as string, incentive_voucher_sent as string, contact_requested as boolean, review_score as string, review_max_score as string, blended_score as string, ratings as (rating as string, score as string)[], guest_details as (email as string, title as string, first_name as string, last_name as string, postcode as string, mobile_phone as string, date_of_birth as string, full_address as string), guest_demographics as string[], questions as (id as string, question as string, answer as string)[], consent as (marketing_consent as boolean, consent_date as string, consent_terms_version as string), purchase as string)[]\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tdocumentForm: 'documentPerLine') ~> source1"
+		}
+	}
+}

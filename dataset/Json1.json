@@ -1,0 +1,163 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "socialentertainmentventures_20210614.json",
+				"folderPath": "cont01",
+				"fileSystem": "cont01"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"feedback": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"type": {
+								"type": "string"
+							},
+							"survey_type": {
+								"type": "string"
+							},
+							"platform": {
+								"type": "null"
+							},
+							"scorecard_link": {
+								"type": "string"
+							},
+							"site_name": {
+								"type": "string"
+							},
+							"site_id": {
+								"type": "null"
+							},
+							"date_of_visit": {
+								"type": "string"
+							},
+							"date_feedback_added": {
+								"type": "string"
+							},
+							"nps_score": {
+								"type": "integer"
+							},
+							"csat_score": {
+								"type": "integer"
+							},
+							"comments": {
+								"type": "null"
+							},
+							"staff_mention": {
+								"type": "null"
+							},
+							"incentive_voucher_sent": {
+								"type": "null"
+							},
+							"contact_requested": {
+								"type": "boolean"
+							},
+							"review_score": {
+								"type": "null"
+							},
+							"review_max_score": {
+								"type": "null"
+							},
+							"blended_score": {
+								"type": "integer"
+							},
+							"ratings": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"rating": {
+											"type": "string"
+										},
+										"score": {
+											"type": "integer"
+										}
+									}
+								}
+							},
+							"guest_details": {
+								"type": "object",
+								"properties": {
+									"email": {
+										"type": "string"
+									},
+									"title": {
+										"type": "null"
+									},
+									"first_name": {
+										"type": "string"
+									},
+									"last_name": {
+										"type": "string"
+									},
+									"postcode": {
+										"type": "null"
+									},
+									"mobile_phone": {
+										"type": "string"
+									},
+									"date_of_birth": {
+										"type": "null"
+									},
+									"full_address": {
+										"type": "null"
+									}
+								}
+							},
+							"guest_demographics": {
+								"type": "array"
+							},
+							"questions": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "integer"
+										},
+										"question": {
+											"type": "string"
+										},
+										"answer": {
+											"type": "string"
+										}
+									}
+								}
+							},
+							"consent": {
+								"type": "object",
+								"properties": {
+									"marketing_consent": {
+										"type": "boolean"
+									},
+									"consent_date": {
+										"type": "string"
+									},
+									"consent_terms_version": {
+										"type": "string"
+									}
+								}
+							},
+							"purchase": {
+								"type": "null"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
